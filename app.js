@@ -109,6 +109,21 @@ links.forEach((item, index) => {
   });
 });
 
+function setActive(e) {
+  const parent = e.target.parentNode;
+  const active = parent.querySelector(".active");
+
+  if (active) {
+    active.classList.toggle("active");
+  }
+
+  e.target.classList.add("active");
+}
+
+links.forEach((item) => {
+  item.addEventListener("click", setActive);
+});
+
 productColors.forEach((color, index) => {
   color.addEventListener("click", () => {
     productImg.src = chosenProduct.colors[index].img;
