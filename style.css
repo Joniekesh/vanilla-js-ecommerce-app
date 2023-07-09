@@ -65,6 +65,7 @@ nav {
 .link:hover,
 .link.active {
   color: teal;
+  font-weight: 900;
 }
 
 .slider {
