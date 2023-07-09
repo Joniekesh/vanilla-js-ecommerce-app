@@ -109,19 +109,18 @@ links.forEach((item, index) => {
   });
 });
 
-function setActive(e) {
-  const parent = e.target.parentNode;
-  const active = parent.querySelector(".active");
-
-  if (active) {
-    active.classList.toggle("active");
-  }
-
-  e.target.classList.add("active");
-}
-
+// Add active state
 links.forEach((item) => {
-  item.addEventListener("click", setActive);
+  item.addEventListener("click", (e) => {
+    const parent = e.target.parentNode;
+    const active = parent.querySelector(".active");
+
+    if (active) {
+      active.classList.toggle("active");
+    }
+
+    e.target.classList.add("active");
+  });
 });
 
 productColors.forEach((color, index) => {
